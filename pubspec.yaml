@@ -1,0 +1,74 @@
+name: sui_xin_ye
+description: 随心耶 - 记录生活，随心而动
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  intl: ^0.20.2
+  image_picker: ^1.0.7
+  timelines_plus: ^1.0.1
+  shared_preferences: ^2.2.2
+  http: ^1.6.0
+  geolocator: ^11.0.0
+  flutter_local_notifications: ^18.0.0
+  crypto: ^3.0.6
+  flutter_colorpicker: ^1.1.0
+  lottie: ^3.1.2
+  flutter_secure_storage: ^9.0.0
+  bcrypt: ^1.1.3
+  local_auth: ^2.1.8
+  supabase_flutter: ^2.8.0
+  speech_to_text: ^7.4.0
+  path_provider: ^2.1.5
+  share_plus: ^12.0.2
+  qr_flutter: ^4.1.0
+  image_gallery_saver: ^2.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/icon/
+    - assets/images/moods/
+    - assets/images/samoye/
+    - assets/images/discovery/
+    - assets/images/discovery/stars/
+    - assets/images/monthly/
+    - assets/images/focus_bg/
+    - assets/images/diary_mascot/时段/深夜/
+    - assets/images/diary_mascot/时段/清晨/
+    - assets/images/diary_mascot/时段/早上/
+    - assets/images/diary_mascot/时段/上午/
+    - assets/images/diary_mascot/时段/中午/
+    - assets/images/diary_mascot/时段/下午/
+    - assets/images/diary_mascot/时段/傍晚/
+    - assets/images/diary_mascot/时段/晚上/
+    - assets/images/diary_mascot/形象/听音乐/
+    - assets/images/diary_mascot/形象/拍照/
+    - assets/images/diary_mascot/形象/玩偶/
+    - assets/images/diary_mascot/形象/看书/
+    - assets/images/diary_mascot/形象/睡觉/
+    - assets/images/diary_mascot/形象/购物/
+    - assets/lottie/
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon/app_icon.png"
+  remove_alpha_ios: true
+  adaptive_icon_background: "#FFFEF9"
+  adaptive_icon_foreground: "assets/images/icon/app_icon_foreground.png"
