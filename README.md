@@ -71,16 +71,17 @@
 | 类别 | 技术 |
 |------|------|
 | 框架 | Flutter 3.x（Dart） |
-| 本地存储 | SharedPreferences + FlutterSecureStorage |
+| 本地存储 | SharedPreferences + FlutterSecureStorage + path_provider |
 | 数据库 | 本地 JSON 文件 + Supabase（云端） |
 | 认证 | 本地密码（bcrypt 哈希）+ Supabase Auth |
 | 生物识别 | local_auth（指纹 / 面容） |
 | 语音输入 | speech_to_text（中文） |
 | 通知 | flutter_local_notifications |
-| 天气 | 和风天气 API |
+| 天气 | 和风天气 API + geolocator（定位） |
 | Markdown | 自研简易渲染器（标题/粗体/斜体/引用/待办/列表/分割线） |
 | 图片处理 | image_picker + image_gallery_saver |
 | 分享 | share_plus + qr_flutter（二维码） |
+| 主题 | flutter_colorpicker（取色器） |
 | 意见反馈 | Formspree（在线提交 + 本地离线保存） |
 | 动画 | Lottie + Flutter 内置动画 |
 | 本地化 | flutter_localizations（中文/英文） |
@@ -97,7 +98,7 @@ lib/
 │   ├── diary_input_state.dart         # 写作状态
 │   ├── focus_task.dart                # 待办任务
 │   └── monthly_card_model.dart        # 月度卡片
-├── screens/                           # 页面（28 个）
+├── screens/                           # 页面（29 个）
 │   ├── home_screen.dart               # 首页卡片流
 │   ├── diary_wizard_screen.dart       # 写日记四步向导
 │   ├── diary_detail_screen.dart       # 日记详情（Markdown 渲染）
@@ -111,6 +112,7 @@ lib/
 │   ├── personal_space_screen.dart     # 个人空间
 │   ├── daily_sign_square_screen.dart  # 日签墙
 │   ├── daily_sign_detail_screen.dart  # 日签详情
+│   ├── daily_sign_editor_screen.dart  # 日签编辑器
 │   ├── daily_sign_share_screen.dart   # 日签分享
 │   ├── login_screen.dart              # 登录 / 注册
 │   ├── app_lock_screen.dart           # 应用锁
@@ -215,7 +217,13 @@ flutter build ios --release
 1. 创建 [Supabase](https://supabase.com/) 项目
 2. 在 `lib/services/supabase_config.dart` 中填入 URL 和 anon key
 
-> 注：不配置上述服务也能正常使用全部本地功能。天气和云端为可选模块。
+**意见反馈（Formspree）**
+
+意见反馈功能使用 Formspree 作为邮件后端。如需启用：
+1. 注册 [Formspree](https://formspree.io/) 创建项目，获取表单端点 ID
+2. 修改 `lib/screens/feedback_screen.dart` 中的 `_formspreeEndpoint`
+
+> 注：不配置上述服务也能正常使用全部本地功能。意见反馈会保存到本地。天气、云端、Formspree 均为可选模块。
 
 ---
 
