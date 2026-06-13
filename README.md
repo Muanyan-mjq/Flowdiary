@@ -17,18 +17,6 @@
 
 ---
 
-## 截图预览
-
-| 首页 | 写日记 | 回忆隧道 | 塔罗 |
-|------|--------|----------|------|
-| ![首页](screenshots/home.png) | ![写日记](screenshots/write.png) | ![回忆](screenshots/memory.png) | ![塔罗](screenshots/tarot.png) |
-
-| 心情日历 | 个人空间 | 日签墙 | 专注 |
-|----------|----------|--------|------|
-| ![日历](screenshots/calendar.png) | ![空间](screenshots/space.png) | ![日签](screenshots/sign.png) | ![专注](screenshots/focus.png) |
-
----
-
 ## 功能
 
 ### 日记
