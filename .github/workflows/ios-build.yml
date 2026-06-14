@@ -27,7 +27,7 @@ jobs:
 
     steps:
       - name: 检出代码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: 安装 Flutter
         uses: subosito/flutter-action@v2
@@ -73,7 +73,7 @@ jobs:
           ls -lh sui_xin_ye_unsigned.ipa
 
       - name: 上传 IPA（无签名版）
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: sui_xin_ye-ios-unsigned
           path: sui_xin_ye_unsigned.ipa
