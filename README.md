@@ -8,28 +8,33 @@
 
 ## 下载
 
-<div align="center">
+<table align="center">
+  <tr align="center">
+    <td width="280">
+      <br>
+      <sub>Android</sub><br>
+      <a href="https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/app-release.apk"><b>下载 APK</b></a><br>
+      <sub>v1.0.0 · 103 MB</sub>
+      <br><br>
+    </td>
+    <td width="280">
+      <br>
+      <sub>iOS</sub><br>
+      <a href="https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/sui_xin_ye_unsigned.ipa"><b>下载 IPA</b></a><br>
+      <sub>v1.0.0 · 49 MB</sub>
+      <br><br>
+    </td>
+  </tr>
+</table>
 
-|     |     |
-|:---:|:---:|
-| <img src="https://img.icons8.com/fluency/48/android-os.png" width="32"><br>**Android** | <img src="https://img.icons8.com/fluency/48/mac-os.png" width="32"><br>**iOS** |
-| v1.0.0 · 103 MB | v1.0.0 · 49 MB |
-| [**下载 APK →**](https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/app-release.apk) | [**下载 IPA →**](https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/sui_xin_ye_unsigned.ipa) |
-
-</div>
-
-> **Android**：下载后直接安装。**iOS**：需通过 AltStore 侧载安装，[查看步骤](#ios-安装)。
+> Android 下载即装。iOS 需通过 AltStore 侧载，[安装步骤见下](#ios-安装)。
 
 ### iOS 安装
 
-<img align="right" width="120" src="https://img.icons8.com/fluency/240/iphone14-pro.png">
-
-1. 电脑安装 [AltServer](https://altstore.io)
-2. iPhone 连电脑 → AltServer → Install AltStore
-3. 输入 Apple ID，等待 AltStore 出现在手机上
-4. 把 IPA 传到手机「文件」
-5. 打开 AltStore → My Apps → `+` → 选择 IPA
-6. 安装完成。每 7 天 WiFi 下自动续签，无需操作
+1. 电脑安装 [AltServer](https://altstore.io) → iPhone 连电脑 → Install AltStore
+2. 输入 Apple ID，手机上出现 AltStore
+3. 把 IPA 传到手机「文件」，打开 AltStore → My Apps → `+` → 选择 IPA
+4. 安装完成。每 7 天 WiFi 下自动续签，无需额外操作
 
 ---
 
