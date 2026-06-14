@@ -13,7 +13,13 @@
 | Android | [![Download APK](https://img.shields.io/badge/下载-APK-blue?style=for-the-badge&logo=android)](https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/app-release.apk) |
 | iOS | [![Download IPA](https://img.shields.io/badge/下载-IPA-lightgrey?style=for-the-badge&logo=apple)](https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/sui_xin_ye_unsigned.ipa) |
 
-> 点击上方按钮直接下载安装包。Android 直接安装 APK。
+> 点击上方按钮直接下载安装包。
+>
+> **Android 安装步骤：**
+> 1. 点击上方 **下载 APK** 按钮，等待下载完成
+> 2. 打开下载的 APK 文件，点击「安装」
+> 3. 如果提示「禁止安装未知应用」，点「设置」→ 允许「浏览器」或「文件管理器」安装未知应用
+> 4. 安装完成后桌面出现「随心耶」图标，点击即可使用
 >
 > **iOS 安装步骤（免费，需电脑辅助一次）：**
 > 1. 在你的 **电脑** 上安装 [AltServer](https://altstore.io)（选 Windows 或 Mac 版）
