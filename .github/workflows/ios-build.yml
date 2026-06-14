@@ -22,12 +22,9 @@ jobs:
   build-ios:
     name: Build iOS IPA
     runs-on: macos-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
     steps:
       - name: 检出代码
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: 安装 Flutter
         uses: subosito/flutter-action@v2
@@ -73,7 +70,7 @@ jobs:
           ls -lh sui_xin_ye_unsigned.ipa
 
       - name: 上传 IPA（无签名版）
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v7
         with:
           name: sui_xin_ye-ios-unsigned
           path: sui_xin_ye_unsigned.ipa
@@ -108,7 +105,7 @@ jobs:
       #
       # - name: 上传 IPA（签名版）
       #   if: env.HAS_SIGNING == 'true'
-      #   uses: actions/upload-artifact@v4
+      #   uses: actions/upload-artifact@v7
       #   with:
       #     name: sui_xin_ye-ios-signed
       #     path: build/ios/ipa/*.ipa
