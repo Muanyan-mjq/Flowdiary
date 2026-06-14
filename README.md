@@ -8,10 +8,15 @@
 
 ## 下载
 
-| 平台 | 下载 |
-|------|------|
-| Android | [![Download APK](https://img.shields.io/badge/下载-APK-blue?style=for-the-badge&logo=android)](https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/app-release.apk) |
-| iOS | [![Download IPA](https://img.shields.io/badge/下载-IPA-lightgrey?style=for-the-badge&logo=apple)](https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/sui_xin_ye_unsigned.ipa) |
+<p align="center">
+  <a href="https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/app-release.apk">
+    <img src="https://img.shields.io/badge/Android-下载_APK-34C759?style=for-the-badge&logo=android&logoColor=white&labelColor=3DDC84&color=34C759" height="56">
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/sui_xin_ye_unsigned.ipa">
+    <img src="https://img.shields.io/badge/iOS-下载_IPA-007AFF?style=for-the-badge&logo=apple&logoColor=white&labelColor=000000&color=007AFF" height="56">
+  </a>
+</p>
 
 > 点击上方按钮直接下载安装包。Android 直接安装 APK。
 >
