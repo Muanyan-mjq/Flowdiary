@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>随心耶 - OPPO Find X9 预览</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        /* 手机外壳 */
+        .phone-frame {
+            width: 432px;
+            height: 935px;
+            background: #1a1a1a;
+            border-radius: 48px;
+            padding: 10px;
+            box-shadow:
+                0 0 0 2px #333,
+                0 20px 60px rgba(0,0,0,0.5),
+                inset 0 0 20px rgba(255,255,255,0.05);
+            position: relative;
+        }
+
+        /* 电源键 */
+        .phone-frame::before {
+            content: '';
+            position: absolute;
+            right: -3px;
+            top: 180px;
+            width: 4px;
+            height: 60px;
+            background: #333;
+            border-radius: 0 3px 3px 0;
+        }
+
+        /* 音量键 */
+        .phone-frame::after {
+            content: '';
+            position: absolute;
+            left: -3px;
+            top: 160px;
+            width: 4px;
+            height: 45px;
+            background: #333;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* 屏幕区域 */
+        .screen {
+            width: 100%;
+            height: 100%;
+            background: #F7F8FA;
+            border-radius: 40px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* 系统状态栏 */
+        .status-bar {
+            height: 56px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 0 24px 6px;
+            background: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+
+        .status-bar .time {
+            font-size: 15px;
+            font-weight: w600;
+            color: #1A1A1A;
+        }
+
+        .status-bar .icons {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-bar .icons svg {
+            width: 16px;
+            height: 16px;
+            fill: #1A1A1A;
+        }
+
+        /* 打孔摄像头（居中挖孔） */
+        .punch-hole {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 14px;
+            height: 14px;
+            background: #000;
+            border-radius: 50%;
+            z-index: 101;
+            box-shadow: 0 0 0 2px #1a1a1a;
+        }
+
+        /* 底部手势条 */
+        .gesture-bar {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 134px;
+            height: 5px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 3px;
+            z-index: 100;
+        }
+
+        /* Flutter 应用 iframe */
+        .app-frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 设备信息面板 */
+        .info-panel {
+            color: #fff;
+            max-width: 260px;
+        }
+
+        .info-panel h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #4ACBD4, #87CEEB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .info-panel .subtitle {
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 32px;
+        }
+
+        .info-panel .spec-list {
+            list-style: none;
+        }
+
+        .info-panel .spec-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info-panel .spec-label {
+            font-size: 13px;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .info-panel .spec-value {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .info-panel .safe-area-badge {
+            display: inline-block;
+            margin-top: 24px;
+            padding: 8px 16px;
+            background: rgba(74, 203, 212, 0.15);
+            border: 1px solid rgba(74, 203, 212, 0.3);
+            border-radius: 8px;
+            font-size: 12px;
+            color: #4ACBD4;
+        }
+
+        /* 安全区域标注线 */
+        .safe-top-line {
+            position: absolute;
+            top: 56px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: rgba(74, 203, 212, 0.4);
+            z-index: 99;
+            pointer-events: none;
+        }
+
+        .safe-bottom-line {
+            position: absolute;
+            bottom: 34px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: rgba(74, 203, 212, 0.4);
+            z-index: 99;
+            pointer-events: none;
+        }
+
+        .safe-label {
+            position: absolute;
+            font-size: 10px;
+            color: #4ACBD4;
+            background: rgba(0,0,0,0.6);
+            padding: 2px 6px;
+            border-radius: 3px;
+            z-index: 102;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .safe-label.top {
+            top: 42px;
+            right: 12px;
+        }
+
+        .safe-label.bottom {
+            bottom: 22px;
+            right: 12px;
+        }
+
+        /* 切换按钮 */
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 13px;
+            cursor: pointer;
+            z-index: 200;
+            transition: all 0.2s;
+        }
+
+        .toggle-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 设备信息 -->
+        <div class="info-panel">
+            <h1>OPPO Find X9</h1>
+            <p class="subtitle">设备预览 · 随心耶</p>
+            <ul class="spec-list">
+                <li>
+                    <span class="spec-label">屏幕尺寸</span>
+                    <span class="spec-value">6.59"</span>
+                </li>
+                <li>
+                    <span class="spec-label">逻辑分辨率</span>
+                    <span class="spec-value">412 × 915 px</span>
+                </li>
+                <li>
+                    <span class="spec-label">Safe Area Top</span>
+                    <span class="spec-value">56 px</span>
+                </li>
+                <li>
+                    <span class="spec-label">Safe Area Bottom</span>
+                    <span class="spec-value">34 px</span>
+                </li>
+                <li>
+                    <span class="spec-label">摄像头</span>
+                    <span class="spec-value">居中挖孔</span>
+                </li>
+                <li>
+                    <span class="spec-label">导航方式</span>
+                    <span class="spec-value">底部手势</span>
+                </li>
+            </ul>
+            <div class="safe-area-badge">✓ 所有内容在安全区域内</div>
+        </div>
+
+        <!-- 手机模型 -->
+        <div class="phone-frame">
+            <div class="screen">
+                <!-- 打孔摄像头 -->
+                <div class="punch-hole"></div>
+
+                <!-- 系统状态栏 -->
+                <div class="status-bar">
+                    <span class="time">9:41</span>
+                    <div class="icons">
+                        <!-- 信号 -->
+                        <svg viewBox="0 0 17 12"><rect x="0" y="8" width="3" height="4" rx="0.5"/><rect x="4.5" y="5" width="3" height="7" rx="0.5"/><rect x="9" y="2" width="3" height="10" rx="0.5"/><rect x="13.5" y="0" width="3" height="12" rx="0.5"/></svg>
+                        <!-- WiFi -->
+                        <svg viewBox="0 0 16 12"><path d="M8 10.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM4.05 8.46a5.58 5.58 0 017.9 0l-.88.88a4.33 4.33 0 00-6.14 0l-.88-.88zM1.34 5.76a8.82 8.82 0 0113.32 0l-.88.88a7.57 7.57 0 00-11.56 0l-.88-.88z"/></svg>
+                        <!-- 电池 -->
+                        <svg viewBox="0 0 28 14"><rect x="0" y="0" width="24" height="14" rx="3" stroke="#1A1A1A" stroke-width="1" fill="none"/><rect x="25" y="4" width="2.5" height="6" rx="1" fill="#1A1A1A"/><rect x="1.5" y="1.5" width="21" height="11" rx="2" fill="#1A1A1A"/></svg>
+                    </div>
+                </div>
+
+                <!-- 安全区域标注线 -->
+                <div class="safe-top-line"></div>
+                <div class="safe-bottom-line"></div>
+                <span class="safe-label top">Safe Area Top: 56px</span>
+                <span class="safe-label bottom">Safe Area Bottom: 34px</span>
+
+                <!-- Flutter 应用 -->
+                <iframe class="app-frame" src="http://localhost:8086"></iframe>
+
+                <!-- 底部手势条 -->
+                <div class="gesture-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 切换安全区域标注显示 -->
+    <button class="toggle-btn" onclick="toggleSafeLines()">隐藏安全区域标注</button>
+
+    <script>
+        let visible = true;
+        function toggleSafeLines() {
+            visible = !visible;
+            document.querySelectorAll('.safe-top-line, .safe-bottom-line, .safe-label').forEach(el => {
+                el.classList.toggle('hidden', !visible);
+            });
+            document.querySelector('.toggle-btn').textContent = visible ? '隐藏安全区域标注' : '显示安全区域标注';
+        }
+    </script>
+</body>
+</html>
