@@ -22,6 +22,8 @@ jobs:
   build-ios:
     name: Build iOS IPA
     runs-on: macos-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: 检出代码
