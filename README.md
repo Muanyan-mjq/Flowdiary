@@ -11,9 +11,9 @@
 | 平台 | 下载 |
 |------|------|
 | Android | [![Download APK](https://img.shields.io/badge/下载-APK-blue?style=for-the-badge&logo=android)](https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/app-release.apk) |
-| iOS | 暂未上架 App Store，可使用 Xcode 自行编译 |
+| iOS | [![Download IPA](https://img.shields.io/badge/下载-IPA-lightgrey?style=for-the-badge&logo=apple)](https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/sui_xin_ye_unsigned.ipa) |
 
-> Android 用户点击上方按钮直接下载安装包，iOS 用户请参考下方「快速开始」编译运行。
+> 点击上方按钮直接下载安装包。Android 直接安装 APK；iOS IPA 需通过 [AltStore](https://altstore.io) 等侧载工具安装。
 
 ---
 
