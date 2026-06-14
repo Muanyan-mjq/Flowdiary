@@ -8,33 +8,23 @@
 
 ## 下载
 
-<table align="center">
-  <tr align="center">
-    <td width="280">
-      <br>
-      <sub>Android</sub><br>
-      <a href="https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/app-release.apk"><b>下载 APK</b></a><br>
-      <sub>v1.0.0 · 103 MB</sub>
-      <br><br>
-    </td>
-    <td width="280">
-      <br>
-      <sub>iOS</sub><br>
-      <a href="https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/sui_xin_ye_unsigned.ipa"><b>下载 IPA</b></a><br>
-      <sub>v1.0.0 · 49 MB</sub>
-      <br><br>
-    </td>
-  </tr>
-</table>
+<br>
 
-> Android 下载即装。iOS 需通过 AltStore 侧载，[安装步骤见下](#ios-安装)。
+<div align="center">
 
-### iOS 安装
+[**🤖 下载 Android 版**](https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/app-release.apk)
+<br><sub>v1.0.0 · 103 MB · 直接安装</sub>
 
-1. 电脑安装 [AltServer](https://altstore.io) → iPhone 连电脑 → Install AltStore
-2. 输入 Apple ID，手机上出现 AltStore
-3. 把 IPA 传到手机「文件」，打开 AltStore → My Apps → `+` → 选择 IPA
-4. 安装完成。每 7 天 WiFi 下自动续签，无需额外操作
+<br>
+
+[**🍎 下载 iOS 版**](https://github.com/Muanyan-mjq/Flowdiary/releases/latest/download/sui_xin_ye_unsigned.ipa)
+<br><sub>v1.0.0 · 49 MB · 需 AltStore 侧载</sub>
+
+</div>
+
+<br>
+
+> **iOS 用户看这里** — 安装只需 3 步：[AltServer](https://altstore.io) 装到电脑 → iPhone 连电脑装 AltStore → 用 AltStore 打开 IPA。之后每 7 天自动续签。
 
 ---
 
