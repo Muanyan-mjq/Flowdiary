@@ -286,8 +286,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## 联系方式
 
 - GitHub: [@muanyan-mjq](https://github.com/muanyan-mjq)
-- 邮箱: muanyan5@gmail.com
-- 个人主页: [https://muanyan-mjq.github.io](https://muanyan-mjq.github.io)
+- 邮箱: muanyan7@gmail.com
+- 个人主页: [https://muanyan-mjq.github.io/muanyan-portfolio/](https://muanyan-mjq.github.io/muanyan-portfolio/)
 
 ---
 
